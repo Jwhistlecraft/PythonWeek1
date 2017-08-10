@@ -1,0 +1,109 @@
+#hello world function
+
+print("hello world")
+
+#hello world function stored in a var
+
+hello = "hello world"
+print(hello)
+
+#function taking a string as a parameter
+
+def myFunction(str):
+    print(str)
+
+myFunction("Dan loves python")
+
+#function taking in two ints
+
+def numberFunction(int1,int2):
+    print(int1+int2)
+
+numberFunction(1,2)
+
+#function two ints and a boolean
+
+def numBoolFunction(int1,int2,bl1):
+    if bl1 == True:
+         print(int1+int2)
+    else:
+         print(int1*int2)
+
+numBoolFunction(1,2,True)
+numBoolFunction(1,2,False)
+
+#function if a = 0 return b
+
+def ifZero(intA,intB,bl2):
+
+    if intA==0:
+        print("intA = 0 here is intB which = %s" %(intB))
+    elif intB==0:
+        print("intB = 0 here is intA which = %s" %(intB))
+    elif bl2 == True:
+        print(intA+intB)
+    else:
+        print(intA*intB)
+
+ifZero(0,1,True)
+ifZero(1,0,False)
+ifZero(3,4,True)
+ifZero(3,4,False)
+
+#recursion
+
+for i in range(1,11):
+    numberFunction(1,2)
+
+#lists
+
+lst = [1, 0, 2, 0, 3, 0, 4, 0, 5, 0]
+a = 0
+while a <= (len(lst) -2):
+    numberFunction(lst[a], lst[a + 1])
+    a=a+1
+if a == len(lst):
+    numberFunction((len(lst)-2),(len(lst)-1))
+else:
+    print("all done")
+
+#recursionlists
+
+b=0
+while b <= (len(lst)-1):
+    print(lst[b])
+    b=b+1
+
+
+#recursionlists 2
+
+def lstFiller(n):
+    lst2=[]
+    c=1
+    while c <= n:
+        lst2.append(c)
+        print(c)
+        c=c+1
+    d=0
+    while d <= (len(lst2)-1):
+        print(lst2[d]*10)
+        d=d+1
+
+lstFiller(5)
+
+#user Input - commented out so I can stop inputting a value every time i code
+#n = input("User input an int please:")
+#lstFiller(int(n))
+
+#Partial Functions
+
+from functools import partial
+
+def multiply(x,y):
+    return x*y
+
+double=partial(multiply,2)
+triple=partial(multiply,3)
+
+print(double(4))
+
