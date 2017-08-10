@@ -23,6 +23,7 @@ hands(22,23)
 hands(22,19)
 hands(19,22)
 
+
 #too hot
 
 def hotInput(temp,isSummer):
@@ -40,38 +41,18 @@ print(hotInput(100, False))
 print(hotInput(100, True))
 print(hotInput(50, True))
 
+
 #leapyeah check
 
 def leapCheck(year):
     if year%4 ==0:
-        print("the year %d is a leap year" %(year))
+        print("the year %d is a leap year\n" %(year))
     else:
-        print("the year %d is not a leap year" %(year))
+        print("the year %d is not a leap year\n" %(year))
 
 leapCheck(400)
 leapCheck(1200)
 leapCheck(1999)
 leapCheck(2020)
-
-#Paint Wizard
-
-def paintWizard(coverage,litres,price,roomSize):
-
-    value = round((((coverage*litres)/price)/price),2)
-    print("This option offers %s m*m per pound" %(value))
-
-    tinsNeeded = roomSize/(litres*coverage)
-    print("It would take %d tins to do the job" %(tinsNeeded))
-
-    wastage = (tinsNeeded*coverage) - roomSize
-    print("%d ltrs would be wasted" %(wastage))
-
-    priceForRoom = tinsNeeded*price
-    print("it would cost: %d" %(priceForRoom))
-
-
-paintWizard(10,20,19.99,500) #CheapoMax
-paintWizard(11,15,17.99,500) #AverageJoes
-paintWizard(20,10,25.00,500) #DuluxourousPaints
 
 
