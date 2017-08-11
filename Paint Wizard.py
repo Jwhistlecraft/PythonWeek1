@@ -51,15 +51,14 @@ compareList.append(duluxourousPaints.paintWizard(165))
 #run the program
 paintComparer()
 
-class testPaintWizaed(unittest.TestCase):
+class testPaintWizard(unittest.TestCase):
+
     def test_cheapest_165(self):
         self.assertEqual(17.99,compareList[1])
     def test_secondCheapest_165(self):
         self.assertEqual(19.99,compareList[0])
     def test_Most_expensive(self):
         self.assertEqual(25,compareList[2])
-
-    averageJoe = PaintJob("AverageJoes", 11, 15, 17.99)
 
     def test_averageJoes_name(self):
         self.assertEqual("AverageJoes", averageJoes.name)
